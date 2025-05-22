@@ -9,6 +9,7 @@ class Board:
         self._create()
         self._add_pieces('white')
         self._add_pieces('black')
+
     def _create(self):
         for row in range(ROWS):
             for col in range(COLS):
@@ -38,4 +39,4 @@ class Board:
         self.squares[row_other][3] = Square(row_other, 0, Queen(color))
 
         #king
-        self.squares[row_other][4] = Square(row_other, 0, Queen(color))
+        self.squares[row_other][4] = Square(row_other, 0,  King(color))
